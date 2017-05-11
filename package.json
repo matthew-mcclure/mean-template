@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
     "body-parser": "^1.17.1",
     "concat": "^1.0.3",
     "dotenv": "^4.0.0",

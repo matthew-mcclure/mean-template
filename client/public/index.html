@@ -8,7 +8,8 @@
 	<title>Title Page</title>
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
+<script src="angular/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 <body ng-app="public" ng-controller="SampleController as SampleCtrl">
 
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -21,7 +22,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Brand</a>
+				<a class="navbar-brand" href="#">{{SampleCtrl.brand}}</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
@@ -81,13 +82,12 @@
 
 	<footer style="background-color: black; margin-top: 20px">Copyright &copy; Sample.com</footer>
 
-	<script src="angular/angular.min.js"></script>
+	
+	
+	<script src="build/app.js"></script>
 	<script>
-		angular.module('public', [])
-	</script>
-	<script src='./services/SampleService.js'></script>
-	<script>
-		angular.module('public')
+		console.log('inline')
+		/*angular.module('public')
 			.controller('SampleController', SampleController)
 
 		SampleController.$inject = ['SampleService']
@@ -140,7 +140,7 @@
 			function onError(response) {
 				console.log(response)
 			}
-		}
+		}*/
 	</script>
 </body>
 
