@@ -1,8 +1,10 @@
 const router = require('express').Router()
 const sampleController = require('../controllers/sample.controller')()
 
-router.get('/sample', sampleController.getAll)
-router.get('/rooms', sampleController.insertOne)
+router.get('/', sampleController.getAll)
+router.post('/', sampleController.insertOne)
+router.put('/:id', sampleController.updateOne)
+router.delete('/:id', sampleController.deleteOne)
 
 
 module.exports = router
