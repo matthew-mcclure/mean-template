@@ -8,12 +8,8 @@
   },
   "scripts": {
     "build": "gulp",
-    //"gulp": "gulp",
-    //"start:dev": "gulp",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-    //"start": "node server.js",
-    //"postinstall": "gulp default"
   },
   "author": "",
   "license": "ISC",
