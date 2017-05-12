@@ -12,6 +12,7 @@ var path = require('path')
 var mergeStream = require('merge-stream')
 var strip = require('gulp-strip-comments')
 var babel = require('gulp-babel')
+var es2015 = require('babel-preset-es2015')
 
 var adminScripts = require('./client/admin/app.scripts.json')
 var publicScripts = require('./client/public/app.scripts.json')
@@ -79,7 +80,7 @@ gulp.task('admin-js', function() {
 gulp.task('public-js', function() {
     return es.merge(gulp.src(source.public.js.src))
         .pipe(babel({
-            presets: ['es2015'].map(require.resolve)
+            presets: ['es2015']
         }))
         // .pipe(ngAnnotate())
         // .pipe(uglify())
