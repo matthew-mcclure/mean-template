@@ -78,9 +78,9 @@ gulp.task('admin-js', function() {
 
 gulp.task('public-js', function() {
     return es.merge(gulp.src(source.public.js.src))
-        /*.pipe(babel({
+        .pipe(babel({
             presets: ['es2015']
-        }))*/
+        }))
         // .pipe(ngAnnotate())
         // .pipe(uglify())
         .pipe(concat('app.js'))
