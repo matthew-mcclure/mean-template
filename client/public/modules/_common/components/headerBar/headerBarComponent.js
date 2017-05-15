@@ -2,7 +2,7 @@
     angular
         .module('public')
         .component('headerBar', {
-            templateUrl: '/modules/_common/components/navbar/navbarComponent.tpl.html',
+            templateUrl: '/modules/_common/components/headerBar/headerBarComponent.tpl.html',
             controller: headerBarController,
             bindings: {
             }
