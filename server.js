@@ -8,10 +8,15 @@ const port = process.env.PORT || 8080
 mongoose.Promise = global.Promise
 
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017')
+if (process.env.NODE_ENV !== 'test') {
+  mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017')
+} else {
+  mongoose.connect(process.env.MONGODB_TEST_URL)
+}
 
-process.on('SIGINT', function() {  
-  mongoose.connection.close(function () { 
+
+process.on('SIGINT', function () {
+  mongoose.connection.close(function () {
     console.log('Mongoose default connection disconnected through app termination')
     process.exit(0)
   })
@@ -19,7 +24,7 @@ process.on('SIGINT', function() {
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
-	extended: true
+  extended: true
 }))
 
 app.use(methodOverride('X-HTTP-Method-Override'))
@@ -30,6 +35,6 @@ app.use(require('express').static(path.join(__dirname, 'client/public')))
 app.use(require('./app/routes'))
 
 
-app.listen(port, ()=> {
-	console.log(`Magic happens on port ${port}`)
+app.listen(port, () => {
+  console.log(`Magic happens on port ${port}`)
 })

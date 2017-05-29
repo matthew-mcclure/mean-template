@@ -1,3 +1,10 @@
-(function() {
-    angular.module('public', ['ui.router'])
+(function () {
+    angular
+        .module('public', [
+            'ui.router',
+            'ng',
+            'ngAnimate',
+            'ngAria',
+            'ngMaterial'
+        ])
 })()

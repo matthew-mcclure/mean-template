@@ -6,34 +6,47 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Title Page</title>
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <script src="angular/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-<body ng-app="public" ng-controller="SampleController as SampleCtrl">
+<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+<link rel="stylesheet" href="/angular-material/angular-material.css">
+<script src="/angular-aria/angular-aria.js"></script>
+<script src="/angular-animate/angular-animate.js"></script>
+<script src="/angular-material/angular-material.js"></script>
+
+<!--<body ng-app="public" ng-controller="SampleController as SampleCtrl">-->
+<body ng-app="public.about">
+<!--<body ui-router-styles-->
+
+	<div ui-view="root" autoscroll="true"></div>
 
 	<header-bar></header-bar>
 
 
-	<!-- home screen image -->
-	<img src="http://www.grafical-net.com/ien/wp-content/uploads/2012/04/placeholder_wide.jpg" style="width:100%" />
+	<image-header></image-header>
 
 
-	<div class="container">
+	<image-card image="'http://couvignou.com/wp-content/themes/divergent/images/placeholder.jpg'"></image-card>
+	<image-card></image-card>
+	<image-card></image-card>
+	<image-card></image-card>
+
+	<!--<div class="container">
 		<div ng-repeat="sample in SampleCtrl.samples" class="col-md-3" style="height: 200px; border-style: solid; margin: 45px; padding: 0px">
 			<h1 style="border-bottom: solid; margin: 0px">{{sample.name}}</h1>
 			<div style="background-size: contain; background-image: url(http://couvignou.com/wp-content/themes/divergent/images/placeholder.jpg); height: 158px; width: 100%">
 				<p>{{sample.description}}</p>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 
 
 	<footer-bar></footer-bar>
 
-	
-	
+
+
 	<script src="build/app.js"></script>
 </body>
 

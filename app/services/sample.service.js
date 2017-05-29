@@ -1,8 +1,8 @@
 const Sample = require('../models/sample')
 
-module.exports = mongoServices
+module.exports = sampleServices
 
-function mongoServices() {
+function sampleServices() {
     return {
         getAll,
         insertOne,

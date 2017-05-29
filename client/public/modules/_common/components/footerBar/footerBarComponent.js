@@ -2,13 +2,13 @@
     angular.module('public')
         .component('footerBar', {
             templateUrl: '/modules/_common/components/footerBar/footerBarComponent.tpl.html',
-            controller: footerBarController,
+            controller: FooterBarController,
             bind: {
 
             }
         })
 
-    function footerBarController() {
+    function FooterBarController() {
         var vm = this
         vm.tagline = "this controlls the footer"
     }
